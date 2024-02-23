@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<div th:replace="~{fragments.html :: menu}"></div>
+<div th:replace="~{fragments.html :: logo}"></div>
+<div id="contact">
+    Adres pizzeri:<br>
+    Brzezówka 171<br>
+    33-230 Szczucin <br>
+    tel: 663349294 <br>
+</div>
+<!--<div>
+    <h1>Formularz e-mail</h1>
+    <form action="#" th:action="@{/send-email}" th:object="${emailForm}" method="post">
+        <label for="recipient">Adres e-mail odbiorcy:</label>
+        <input type="email" id="recipient" th:field="*{recipientEmail}" required>
+        <br>
+        <label for="message">Treść wiadomości:</label>
+        <textarea id="message" rows="4" cols="50" th:field="*{message}" required></textarea>
+        <br>
+        <button type="submit">Wyślij</button>
+    </form>
+</div>-->
+
+<div id="mapa">
+    <h2>Mapa dojazdu</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2549.931700401268!2d21.085345877035692!3d50.274533871559065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d649619821afd%3A0x3221174e5b50e015!2sBrzez%C3%B3wka%20171%2C%2033-230%20Brzez%C3%B3wka!5e0!3m2!1spl!2spl!4v1708604229065!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</body>
+</html>

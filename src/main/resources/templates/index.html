@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Pizza</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div th:replace="~{fragments.html :: menu}"></div>
+<div th:replace="~{fragments.html :: logo}"></div>
+
+<div class="container">
+  <h1>Order Pizza</h1>
+  <form action="#" th:action="@{/}" th:object="${pizza}" method="post">
+    <label for="size">Choose pizza size:</label>
+    <select id="size" name="size" th:field="*{size}">
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select><br><br>
+    <label for="toppings">Choose toppings:</label><br>
+    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+    <label for="pepperoni">Pepperoni</label><br>
+    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+    <label for="mushrooms">Mushrooms</label><br>
+    <input type="checkbox" id="onions" name="toppings" value="onions">
+    <label for="onions">Onions</label><br><br>
+    <input type="submit" value="Order">
+  </form>
+</div>
+
+</body>
+</html>
