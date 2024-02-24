@@ -1,0 +1,38 @@
+.container2 {
+  overflow: auto;
+  width: 1200px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.left-div {
+    width: 550px;
+    float: left;
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+ }
+
+.right-div {
+    width: 550px;
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px auto;
+    font-family: "Cuprum", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.logo img {
+    width: 400px;
+    margin: auto;
+    padding: 0 auto;
+    text-align: center;
+}
+
+h3{
+    font-family: "Cuprum", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 40px auto 40px auto;
+    text-align: center;
+    font-size: 30px;
+}
+

@@ -14,4 +14,12 @@ public class SessionData {
 
     private User user;
     private Order order;
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 }

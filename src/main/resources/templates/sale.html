@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sale.css">
 </head>
 <body>
 <div th:replace="~{fragments.html :: menu}"></div>
 <div th:replace="~{fragments.html :: logo}"></div>
+
+<h3>Aktualne promocje</h3>
+
+<div class="container2">
+    <div>
+        <div class="left-div">
+            <div class="logo">
+                <img src="/promocja1.jpg">
+            </div>
+            <div class="right-div">
+                Przy zakupie pizzy powyżej 100 zł czekają na Ciebie 4 wyjątkowe sosy
+            </div>
+        </div>
+        <div>
+            <div class="left-div">
+                <div class="logo">
+                    <img src="/promocja2.jpg">
+                </div>
+                <div class="right-div">
+                    Przy zakupie dwóch dużych pizz, trzecia mała pepperoni dostaniecie gratis!
+                    Oferta obowiązuje wyłącznie w lokalu lub przy zamówieniach telefonicznych.
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
 </body>
 </html>
