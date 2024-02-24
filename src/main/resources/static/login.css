@@ -1,0 +1,23 @@
+.input-field {
+    font-size: 20px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: black;
+    display: block;
+    margin: 5px auto;
+    padding: 5px 10px;
+    transition: border, color, background-color 1s;
+    background-color: white;
+    text-align: center;
+}
+
+.input-field:hover {
+    border: 2px solid red;
+    background-color: red;
+    color: white;
+}
+
+#content{
+    text-align: center;
+}
