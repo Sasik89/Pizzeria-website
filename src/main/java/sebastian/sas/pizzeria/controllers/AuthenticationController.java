@@ -45,14 +45,14 @@ public class AuthenticationController {
     @RequestMapping(path = "/register", method = RequestMethod.POST)
     public String register2(@ModelAttribute User user) {
         userDAO.addUser(user);
-/*        System.out.println(user.getName());
+        System.out.println(user.getName());
         System.out.println(user.getSurname());
         System.out.println(user.getLogin());
         System.out.println(user.getPassword());
         System.out.println(user.getAddress().getCity());
         System.out.println(user.getAddress().getStreet());
         System.out.println(user.getAddress().getZipCode());
-        System.out.println(user.getAddress().getNumberOfHouse());*/
+        System.out.println(user.getAddress().getNumberOfHouse());
         return "redirect:/";
     }
 }

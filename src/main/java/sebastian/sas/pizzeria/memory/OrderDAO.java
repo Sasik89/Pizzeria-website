@@ -1,13 +1,14 @@
 package sebastian.sas.pizzeria.memory;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import sebastian.sas.pizzeria.model.Order;
 import sebastian.sas.pizzeria.model.Pizza;
 import sebastian.sas.pizzeria.model.User;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 @Repository
 public class OrderDAO implements IOrderDAO {
 
