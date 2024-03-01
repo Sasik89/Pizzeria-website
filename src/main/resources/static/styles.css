@@ -14,9 +14,10 @@ text-align: center;
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background: #f3ffe6;
 }
 
 h1 {
@@ -65,4 +66,20 @@ input[type="submit"]:hover {
     width: 1100px;
     text-align: center;
     margin: 20px auto;
+}
+#price div {
+    display: inline-block;
+    margin: 5px auto;
+    font-size: 15px;
+}
+
+#topping div{
+    display: inline-block;
+    margin: 5px auto;
+    font-size: 15px;
+}
+
+#pizzaName{
+    font-size: 25px;
+    margin: 10px auto;
 }

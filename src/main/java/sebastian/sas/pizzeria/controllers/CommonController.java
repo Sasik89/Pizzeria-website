@@ -12,7 +12,6 @@ public class CommonController {
     public String main(){
         return "redirect:/";
     }
-
     @RequestMapping(path="/contact", method = RequestMethod.GET)
     public String contact(){
         return "contact";

@@ -7,6 +7,7 @@ var street = document.getElementById("street");
 var numberOfHouse = document.getElementById("numberOfHouse");
 var zipCode = document.getElementById("zipCode");
 var city = document.getElementById("city");
+var phoneNumber = document.getElementById("phoneNumber");
 var password = document.getElementById("password");
 var password2 = document.getElementById("password2");
 var info = document.getElementById("info");
@@ -15,6 +16,7 @@ var loginRegex = /^.{5,}$/;
 var nameRegex = /^[A-Z][a-z]+$/;
 var surnameRegex = /^[A-Z][a-z]+([ -][A-Z][a-z]+)?$/;
 var passwordRegex = /^.{5,}$/;
+var phoneNumberRegex = /\\+48\\s?[1-9][0-9]{2}\\s?[0-9]{3}\\s?[0-9]{3}/;
 var streetRegex = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\d\s./\\-]+$/;
 var numberOfHouseRegex = /^\d+[A-Za-z]?(\/\d+)?[A-Za-z]?$/;
 var zipCodeRegex = /^\d{2}-\d{3}$/;
@@ -70,6 +72,14 @@ var cityRegex = /^[A-Za-z]+(?:[\s-][A-Za-z]+)*$/;
         result = false;
     } else {
         city.style.background = null;
+    }
+
+   if(!phoneNumberRegex.test(phoneNumber.value)){
+        infoText = infoText + "Niepoprawna numer telefonu<br>";
+        phoneNumber.style.background = "#fac0c0";
+        result = false;
+    } else {
+        phoneNumber.style.background = null;
     }
 
 

@@ -9,25 +9,51 @@
 <div th:replace="~{fragments.html :: menu}"></div>
 <div th:replace="~{fragments.html :: logo}"></div>
 
-<div class="container">
-  <h1>Order Pizza</h1>
+<div class="container" th:each="pizza : *{pizzaList}">
+  <div id="pizzaName" th:text="*{pizza.name}"></div>
+  <div id="topping">Składniki:
+    <div th:each="topping : ${pizza.toppings}" th:text="${topping}+'&nbsp;'"></div>
+  </div>
+  <div id="price">Cena:
+    <div th:each="entry : ${pizza.price}">
+      <div th:text="${entry.key}"></div>: <span th:text="${entry.value} + ' zł&nbsp;'"></span>
+    </div>
+  </div>
+
   <form action="#" th:action="@{/}" th:object="${pizza}" method="post">
-    <label for="size">Choose pizza size:</label>
+    <label for="size">Wybierz rozmiar Pizzy:</label>
     <select id="size" name="size" th:field="*{size}">
-      <option value="small">Small</option>
-      <option value="medium">Medium</option>
-      <option value="large">Large</option>
+      <option value="SMALL">SMALL</option>
+      <option value="MEDIUM">MEDIUM</option>
+      <option value="LARGE">LARGE</option>
     </select><br><br>
-    <label for="toppings">Choose toppings:</label><br>
+    <input type="hidden" th:name="name" th:value="${pizza.name}" />
+    <input type="hidden" th:name="size" th:value="${pizza.size}" />
+
+    <label for="toppings"> Wybierz dodatkowe składniki:</label><br>
     <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
-    <label for="pepperoni">Pepperoni</label><br>
-    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
-    <label for="mushrooms">Mushrooms</label><br>
-    <input type="checkbox" id="onions" name="toppings" value="onions">
-    <label for="onions">Onions</label><br><br>
+    <label for="pepperoni">pepperoni</label>
+    <input type="checkbox" id="pieczarki" name="toppings" value="pieczarki">
+    <label for="pieczarki">pieczarki</label>
+    <input type="checkbox" id="ser" name="toppings" value="ser">
+    <label for="ser">ser</label>
+    <input type="checkbox" id="ogórek" name="toppings" value="ogórek">
+    <label for="ogórek">ogórek</label>
+    <input type="checkbox" id="szynka" name="toppings" value="szynka">
+    <label for="szynka">szynka</label>
+    <input type="checkbox" id="salami" name="toppings" value="salami">
+    <label for="salami">salami</label>
+    <input type="checkbox" id="kukurydza" name="toppings" value="kukurydza">
+    <label for="ser">kukurydza</label>
+    <input type="checkbox" id="boczek" name="toppings" value="boczek">
+    <label for="boczek">boczek</label>
+    <input type="checkbox" id="pomidor" name="toppings" value="pomidor">
+    <label for="ser">pomidor</label>
+    <input type="checkbox" id="cebula" name="toppings" value="cebula">
+    <label for="cebula">cebula</label><br>
     <input type="submit" value="Order">
   </form>
-</div>
 
+</div>
 </body>
 </html>

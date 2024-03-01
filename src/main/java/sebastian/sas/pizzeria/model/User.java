@@ -10,6 +10,7 @@ public class User {
     private String surname;
     private String login;
     private String password;
+    private String phoneNumber;
     private Role role;
     private Address address;
 
@@ -18,14 +19,16 @@ public class User {
         this.login = username;
     }
 
-    public User(String name, String surname, String login, String password, Address address, Role role) {
+    public User(String name, String surname, String login, String password, String phoneNumber, Role role, Address address) {
         this.name = name;
         this.surname = surname;
         this.login = login;
         this.password = password;
-        this.address = address;
+        this.phoneNumber = phoneNumber;
         this.role = Role.USER;
+        this.address = address;
     }
+
     public User() {
     }
     public enum Role{
