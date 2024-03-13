@@ -18,6 +18,7 @@ import sebastian.sas.pizzeria.model.User;
 import sebastian.sas.pizzeria.sessiondata.SessionData;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -45,8 +46,11 @@ public class OrderController {
     @PostMapping("/")
     public String submitOrder(@ModelAttribute Pizza pizza, @RequestParam("name") String pizzaName,
                               @RequestParam("size") String pizzaSize,
-                              @RequestParam("toppings") List<String> selectedToppings) {
+                              @RequestParam(value = "toppings", required = false) List<String> selectedToppings) { //required false, oznacz ze parametr może przyjść a nie musi
         try {
+            if (selectedToppings == null) {
+                selectedToppings = new ArrayList<>();
+            }
             User user = new User(sessionData.getLogin());
             PizzaDTO pizzaDTO = new PizzaDTO(pizzaName,
                     pizzaSize,

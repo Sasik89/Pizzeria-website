@@ -41,6 +41,7 @@ public class AuthenticationController {
     }
     @RequestMapping(path = "/logout", method = RequestMethod.GET)
     public String logout() {
+        authenticationService.logout();
         return "redirect:/";
     }
     @RequestMapping(path = "/register", method = RequestMethod.GET)

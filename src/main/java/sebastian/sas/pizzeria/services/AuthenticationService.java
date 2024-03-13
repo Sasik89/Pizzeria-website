@@ -13,6 +13,9 @@ public class AuthenticationService implements IAuthenticationService{
     @Autowired
     IUserDAO userDAO;
 
+    @Autowired
+    SessionData sessionData;
+
     @Override
     public boolean logged(String login, String password) {
         Optional<User> userBox = this.userDAO.getLogin(login);
@@ -23,4 +26,11 @@ public class AuthenticationService implements IAuthenticationService{
         }
         return false;
     }
+
+    @Override
+    public void logout() {
+        sessionData.setLogin(null);
+        sessionData.setOrder(null);
     }
+
+}
