@@ -11,9 +11,6 @@ import java.util.Optional;
 public class AuthenticationService implements IAuthenticationService{
 
     @Autowired
-    SessionData sessionData;
-
-    @Autowired
     IUserDAO userDAO;
 
     @Override
@@ -21,7 +18,6 @@ public class AuthenticationService implements IAuthenticationService{
         Optional<User> userBox = this.userDAO.getLogin(login);
         for(User user : userDAO.getUsers()){
             if(login.equals(user.getLogin()) && password.equals(user.getPassword())){
-                this.sessionData.setUser(userBox.get());
                 return true;
             }
         }

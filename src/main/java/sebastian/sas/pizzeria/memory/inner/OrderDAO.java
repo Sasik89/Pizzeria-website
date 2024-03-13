@@ -6,7 +6,6 @@ import sebastian.sas.pizzeria.dto.PizzaDTO;
 import sebastian.sas.pizzeria.memory.IOrderDAO;
 import sebastian.sas.pizzeria.memory.IdSequence;
 import sebastian.sas.pizzeria.model.Order;
-import sebastian.sas.pizzeria.model.Pizza;
 import sebastian.sas.pizzeria.model.User;
 
 import java.time.LocalDateTime;
@@ -24,7 +23,6 @@ public class OrderDAO implements IOrderDAO {
     public void addOrder(User user, PizzaDTO pizza) {
         this.lista.add(new Order(idSequence.getId(), user, pizza, LocalDateTime.now()));
     }
-
 
     public void deleteOrder(int id) {
         Iterator<Order> iterator = this.lista.iterator();

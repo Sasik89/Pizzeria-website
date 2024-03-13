@@ -1,0 +1,41 @@
+.position{
+    width: 1000px;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px auto;
+    border: 1px solid black;
+    cursor: default;
+    border-radius: 10px;
+}
+
+.position div{
+    display: inline-block;
+}
+
+.login{
+    width: 10%;
+}
+
+.name{
+    width: 14%;
+}
+
+.size {
+    width: 10%;
+}
+
+.toppings {
+    width: 19%;
+}
+
+.additionalToppings {
+    width: 19%;
+}
+
+.price {
+    width: 8%;
+}
+
+.date {
+    width: 15%;
+}

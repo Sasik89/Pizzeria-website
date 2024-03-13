@@ -29,8 +29,8 @@
     </select><br><br>
     <input type="hidden" th:name="name" th:value="${pizza.name}" />
     <input type="hidden" th:name="size" th:value="${pizza.size}" />
-
-    <label for="toppings"> Wybierz dodatkowe składniki:</label><br>
+    
+    <label> Wybierz dodatkowe składniki:</label><br>
     <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
     <label for="pepperoni">pepperoni</label>
     <input type="checkbox" id="pieczarki" name="toppings" value="pieczarki">
@@ -44,14 +44,14 @@
     <input type="checkbox" id="salami" name="toppings" value="salami">
     <label for="salami">salami</label>
     <input type="checkbox" id="kukurydza" name="toppings" value="kukurydza">
-    <label for="ser">kukurydza</label>
+    <label for="kukurydza">kukurydza</label>
     <input type="checkbox" id="boczek" name="toppings" value="boczek">
     <label for="boczek">boczek</label>
     <input type="checkbox" id="pomidor" name="toppings" value="pomidor">
-    <label for="ser">pomidor</label>
+    <label for="pomidor">pomidor</label>
     <input type="checkbox" id="cebula" name="toppings" value="cebula">
     <label for="cebula">cebula</label><br>
-    <input type="submit" value="Order">
+    <input th:if="${sessionData.login != null}" type="submit" value="Order">
   </form>
 
 </div>

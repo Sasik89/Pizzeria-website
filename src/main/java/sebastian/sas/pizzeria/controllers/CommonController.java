@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class CommonController {
 
-
     @RequestMapping(path={"/main"}, method = RequestMethod.GET)
     public String main(){
         return "redirect:/";
@@ -16,7 +15,6 @@ public class CommonController {
     public String contact(){
         return "contact";
     }
-
     @RequestMapping(path="/sale", method = RequestMethod.GET)
     public String sale(){
         return "sale";

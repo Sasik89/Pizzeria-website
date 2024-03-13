@@ -6,6 +6,7 @@ import lombok.Setter;
 import sebastian.sas.pizzeria.dto.PizzaDTO;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Getter
 @Setter
@@ -22,5 +23,10 @@ public class Order {
         this.user = user;
         this.pizza = pizza;
         this.date = LocalDateTime.now();
+    }
+
+    public String getFormattedDate(){
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yy HH:mm");
+        return this.date.format(dateTimeFormatter);
     }
 }

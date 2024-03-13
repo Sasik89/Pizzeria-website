@@ -7,19 +7,15 @@ public class EmailForm {
     public EmailForm() {
         // Pusty konstruktor potrzebny dla obsługi formularzy przez Spring
     }
-
     public String getRecipientEmail() {
         return recipientEmail;
     }
-
     public void setRecipientEmail(String recipientEmail) {
         this.recipientEmail = recipientEmail;
     }
-
     public String getMessage() {
         return message;
     }
-
     public void setMessage(String message) {
         this.message = message;
     }

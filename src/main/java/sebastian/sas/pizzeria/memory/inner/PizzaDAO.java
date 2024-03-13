@@ -47,7 +47,6 @@ public class PizzaDAO implements IPizzaDAO {
         return Optional.empty();
     }
 
-
     @Override
     public Optional<Pizza> getPizza(String name) {
         for(Pizza pizza : this.pizzaList){

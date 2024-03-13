@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <title>Zamówienia</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="order.css">
+
 </head>
 <body>
 <div th:replace="~{fragments.html :: menu}"></div>
 <div th:replace="~{fragments.html :: logo}"></div>
+
+<div id="content1">
+    <div class="position">
+        <div class="login">Użytkownik</div>
+        <div class="name">Nazwa pizzy</div>
+        <div class="size">Rozmiar</div>
+        <div class="toppings">Składniki</div>
+        <div class="additionalToppings">Dodatkowe składniki</div>
+        <div class="price">Cena</div>
+        <div class="date">Data zamówienia</div>
+    </div>
+    <div class="position" th:each="position: ${sessionData.order}">
+        <div th:text="${sessionData.login}" class="login"></div>
+        <div th:text="${position.pizza.name}" class="name"></div>
+        <div th:text="${position.pizza.size}" class="size"></div>
+        <div th:text="${position.pizza.toppings}" class="toppings"></div>
+        <div th:text="${position.pizza.additionalToppings}" class="additionalToppings"></div>
+        <div th:text="${position.pizza.price}" class="price"></div>
+        <div th:text="${position.getFormattedDate()}" class="date"></div>
+    </div>
+</div>
 </body>
 </html>

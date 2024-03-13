@@ -25,17 +25,16 @@ public class AuthenticationController {
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)
     public String login(Model model) {
-        model.addAttribute("sessionDate", sessionData); //przekazuje do html obiekt sessionDate
+        model.addAttribute("sessionDate", sessionData);
         return "login";
-        // TODO: 24.02.2024 Do poprawienia
     }
 
-    // TODO: 24.02.2024 Do poprawienia
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public String login(@RequestParam String login, @RequestParam String password, Model model) {
         if (authenticationService.logged(login, password)) {
-            model.addAttribute("sessionData", userDAO.getLogin(login).get());
-            System.out.println(userDAO.getLogin(login).get());
+            sessionData.setLogin(login);
+            model.addAttribute("sessionData", sessionData);
+            System.out.println(sessionData.getLogin());
             return "redirect:/";
         }
         return "redirect:/login";
